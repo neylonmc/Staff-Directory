@@ -1,13 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "react-bootstrap/Navbar";
 
-class Navbar extends Component {
-  render() {
-    return (
-      <div>
-        <h1> Hello </h1>
-      </div>
-    );
-  }
+function NavbarTop() {
+  return (
+    <Navbar bg="dark" variant="dark" style={{ textAlign: "center" }}>
+      <Navbar.Brand>
+        <h1 className="navbar">Initech Staff Directory</h1>
+      </Navbar.Brand>
+    </Navbar>
+  );
 }
-
-export default Navbar;
+export default NavbarTop;
