@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const UserItems = ({ user: { name, large, phone, email, dob } }) => {
+const UserItems = ({ user: { first, large, phone, email, age } }) => {
   return (
     <tr>
       <td>
@@ -12,10 +12,10 @@ const UserItems = ({ user: { name, large, phone, email, dob } }) => {
           style={{ width: "60px " }}
         />
       </td>
-      <td>{name}</td>
+      <td>{first}</td>
       <td>{phone}</td>
       <td>{email}</td>
-      <td>{dob}</td>
+      <td>{age}</td>
     </tr>
   );
 };
