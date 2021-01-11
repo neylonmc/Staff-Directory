@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const UserItems = ({ user: { name, large, phone, email, dob } }) => {
   return (
@@ -17,6 +18,10 @@ const UserItems = ({ user: { name, large, phone, email, dob } }) => {
       <td>{dob}</td>
     </tr>
   );
+};
+
+UserItems.propTypes = {
+  user: PropTypes.object.isRequired,
 };
 
 export default UserItems;
