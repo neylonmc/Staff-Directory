@@ -1,7 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const UserItems = ({ user: { first, large, phone, email, age } }) => {
+const UserItems = (props) => {
+  const { large, first, email, phone, gender } = props.user;
+
   return (
     <tr>
       <td>
@@ -15,13 +16,11 @@ const UserItems = ({ user: { first, large, phone, email, age } }) => {
       <td>{first}</td>
       <td>{phone}</td>
       <td>{email}</td>
-      <td>{age}</td>
+      <td>{gender}</td>
     </tr>
   );
 };
 
-UserItems.propTypes = {
-  user: PropTypes.object.isRequired,
-};
-
 export default UserItems;
+
+//{ user: { large, first, phone, email, age } }
