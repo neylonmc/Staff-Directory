@@ -1,10 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-//import Navbar from "react-bootstrap/Navbar";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 
-function NavbarTop() {
+function Navbar() {
   return (
     <Jumbotron fluid>
       <Container>
@@ -14,4 +13,4 @@ function NavbarTop() {
     </Jumbotron>
   );
 }
-export default NavbarTop;
+export default Navbar;
