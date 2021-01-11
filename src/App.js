@@ -3,7 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/Users";
-import axios from "axios";
+import Search from "./components/users/Search";
 
 class App extends Component {
   state = {
@@ -15,7 +15,9 @@ class App extends Component {
     this.setState({ loading: true });
 
     fetch("https://randomuser.me/api/?results=10")
-      .then((response) => response.json())
+      .then((response) => {
+        return response.json();
+      })
       .then((response) => {
         this.setState({
           users: response.results,
@@ -29,6 +31,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <div className="container">
+          <Search />
           <Users loading={this.state.loading} users={this.state.users} />
         </div>
       </div>
