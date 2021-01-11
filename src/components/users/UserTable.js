@@ -1,7 +1,6 @@
 import React from "react";
 
-const UserItems = (props) => {
-  const { name, large, phone, email, dob } = props.user;
+const UserItems = ({ user: { name, large, phone, email, dob } }) => {
   return (
     <tr>
       <td>
