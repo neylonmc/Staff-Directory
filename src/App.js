@@ -6,12 +6,17 @@ import UserItems from "./components/users/UserTable";
 import Search from "./components/users/Search";
 
 class App extends Component {
+  //Search Users
+  searchUsers = async (text) => {
+    console.log(text);
+  };
+
   render() {
     return (
       <div className="App">
         <Navbar />
         <div className="container">
-          <Search />
+          <Search searchUsers={this.searchUsers} />
           <UserItems />
         </div>
       </div>
