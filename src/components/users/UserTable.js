@@ -25,7 +25,6 @@ class UserItems extends Component {
           );
         });
         this.setState({ userData: userData });
-        console.log("state", this.state.userData);
       });
   }
 
