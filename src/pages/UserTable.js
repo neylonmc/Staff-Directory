@@ -2,15 +2,19 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as ReactBootStrap from "react-bootstrap";
 
+//Creates UserItems Component
 class UserItems extends Component {
+  //State
   state = {
     users: [],
   };
 
+  //Splits the DOB field coming in and only displays things up to the T(for time).
   getData = (date) => {
     return date.split("T")[0];
   };
 
+  //Calls the randomuser API and displays the data
   async componentDidMount() {
     fetch("https://randomuser.me/api/?results=200")
       .then((results) => {
@@ -19,6 +23,7 @@ class UserItems extends Component {
       .then((data) => {
         let userData = data.results.map((table) => {
           return (
+            //Returns data in the table
             <tr key={table.results}>
               <img src={table.picture.medium} alt="" />
               <td>
@@ -34,9 +39,9 @@ class UserItems extends Component {
       });
   }
 
+  //Renders the data below
   render() {
     return (
-      //<div>{this.state.userData}</div>;
       <ReactBootStrap.Table striped bordered hover>
         <thead>
           <tr>
