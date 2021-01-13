@@ -1,6 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import logo from "./images/12.png";
 

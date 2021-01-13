@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./components/layout/Header/index";
-import UserItems from "./components/users/UserTable";
-import Search from "./components/users/Search";
-import Navbar from "./components/layout/Navbar/index";
+import Header from "./components/Header/index";
+import UserItems from "./pages/UserTable";
+import Search from "./pages/Search";
+import Navbar from "./components/Navbar/index";
 
 class App extends Component {
   //Search Users
