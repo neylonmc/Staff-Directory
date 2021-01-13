@@ -42,8 +42,8 @@ class UserItems extends Component {
           <tr>
             <th>Photo</th>
             <th>Full Name</th>
-            <th>Email</th>
             <th>Phone</th>
+            <th>Email</th>
             <th>DOB</th>
           </tr>
         </thead>
