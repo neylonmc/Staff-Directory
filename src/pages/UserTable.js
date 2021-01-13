@@ -7,6 +7,10 @@ class UserItems extends Component {
     users: [],
   };
 
+  getData = (date) => {
+    return date.split("T")[0];
+  };
+
   async componentDidMount() {
     fetch("https://randomuser.me/api/?results=200")
       .then((results) => {
@@ -22,7 +26,7 @@ class UserItems extends Component {
               </td>
               <td>{table.phone}</td>
               <td>{table.email}</td>
-              <td>{table.dob.age}</td>
+              <td>{this.getData(table.dob.date)}</td>
             </tr>
           );
         });
