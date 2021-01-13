@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import * as ReactBootStrap from "react-bootstrap";
 
 class UserItems extends Component {
   state = {
@@ -29,10 +31,22 @@ class UserItems extends Component {
   }
 
   render() {
-    return <div>{this.state.userData}</div>;
+    return (
+      //<div>{this.state.userData}</div>;
+      <ReactBootStrap.Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>DOB</th>
+          </tr>
+        </thead>
+        <tbody>{this.state.userData}</tbody>
+      </ReactBootStrap.Table>
+    );
   }
 }
 
 export default UserItems;
-
-//{ user: { large, first, phone, email, age } }
