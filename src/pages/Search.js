@@ -6,10 +6,10 @@ class Search extends Component {
     text: "",
   };
 
-  //Allows text to be input in the field
+  //Allows text to be input in the field to change the state
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
-  //When the submit button is hit, changes the state
+  //Passes props up the App.js and then clears the form after it is submitted
   onSubmit = (e) => {
     e.preventDefault();
     this.props.searchUsers(this.state.text);

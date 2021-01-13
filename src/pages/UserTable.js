@@ -25,7 +25,9 @@ class UserItems extends Component {
           return (
             //Returns data in the table
             <tr key={table.results}>
-              <img src={table.picture.medium} alt="" />
+              <td>
+                <img src={table.picture.medium} alt="" />
+              </td>
               <td>
                 {table.name.first} {table.name.last}
               </td>

@@ -8,10 +8,6 @@ import Navbar from "./components/Navbar/";
 
 class App extends Component {
   //Search Users
-  searchUsers = async (text) => {
-    console.log(text);
-  };
-
   render() {
     return (
       <div className="App">
