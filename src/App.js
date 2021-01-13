@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/layout/Header/index";
 import UserItems from "./components/users/UserTable";
 import Search from "./components/users/Search";
+import Navbar from "./components/layout/Navbar/index";
 
 class App extends Component {
   //Search Users
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar />
         <Header />
         <div className="container">
           <Search searchUsers={this.searchUsers} />
