@@ -11,16 +11,16 @@ class UserItems extends Component {
         return results.json();
       })
       .then((data) => {
-        let userData = data.results.map((pic) => {
+        let userData = data.results.map((table) => {
           return (
-            <tr key={pic.results}>
-              <img src={pic.picture.medium} alt="" />
+            <tr key={table.results}>
+              <img src={table.picture.medium} alt="" />
               <td>
-                {pic.name.first} {pic.name.last}
+                {table.name.first} {table.name.last}
               </td>
-              <td>{pic.phone}</td>
-              <td>{pic.email}</td>
-              <td>{pic.dob.age}</td>
+              <td>{table.phone}</td>
+              <td>{table.email}</td>
+              <td>{table.dob.age}</td>
             </tr>
           );
         });
