@@ -1,12 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import "./style.css";
+import logo from "./12.png";
 
 function Navbar() {
   return (
-    <Jumbotron fluid>
-      <h1>IniTech Staff Directory</h1>
-      <p>Staff Directory of Initech. Find all employees below.</p>
+    <Jumbotron fluid className="jumbo">
+      <img src={logo} alt="logo" />
     </Jumbotron>
   );
 }
