@@ -7,7 +7,6 @@ import Search from "./pages/Search";
 import Navbar from "./components/Navbar/";
 
 class App extends Component {
-  //Search Users
   render() {
     return (
       <div className="App">
@@ -15,7 +14,7 @@ class App extends Component {
         <Header />
         <div className="container">
           <Search searchUsers={this.searchUsers} />
-          <UserItems />
+          <UserItems userState={this.userState} />
         </div>
       </div>
     );
